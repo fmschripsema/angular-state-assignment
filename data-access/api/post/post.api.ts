@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Post } from 'data-access/services/post/post.types';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
+import { Post } from '../../services/post/post.types';
 
 @Injectable({
   providedIn: 'root'

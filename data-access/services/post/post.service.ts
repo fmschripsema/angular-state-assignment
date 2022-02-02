@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { PostApi } from 'data-access/api/post/post.api';
+import { PostApi } from '../../api/post/post.api';
 import { Observable } from 'rxjs';
-import { Post } from 'data-access/services/post/post.types';
+import { Post } from '../../services/post/post.types';
 
 @Injectable({
   providedIn: 'root'

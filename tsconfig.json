@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -23,7 +23,8 @@
     "paths": {
       "@angular/*": [ "../node_modules/@angular/*" ],
       "@views/*": ["app/views/*"],
-      "@data-access/*": ["data-access/*"]
+      "@data-access/*": ["../data-access/*"],
+      "@store/*": ["app/store/*"]
     }
   },
   "angularCompilerOptions": {
