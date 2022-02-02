@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PostApi {
-  private postUrl: string = 'https://jsonplaceholder.typicode.com/posts/1';
+  private postUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
   public constructor(private httpClient: HttpClient) {
   }
@@ -22,7 +22,7 @@ export class PostApi {
   }
 
   handleError(error: any) {
-    let errorMessage: string = '';
+    let errorMessage: string;
 
     if (error.error instanceof ErrorEvent) {
       errorMessage = `(Client) Error: ${error.error.message}`;

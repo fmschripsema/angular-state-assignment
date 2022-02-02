@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tile',
   templateUrl: './tile.component.html',
   styleUrls: ['./tile.component.scss']
 })
-export class TileComponent implements OnInit {
+export class TileComponent {
+  @Input() id!: number;
+  @Input() userId!: number;
 
-  constructor() { }
+  flipped: boolean = false;
 
-  ngOnInit(): void {
+  flipTile(): void {
+    this.flipped = !this.flipped;
   }
-
 }

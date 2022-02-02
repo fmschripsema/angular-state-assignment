@@ -1,1 +1,13 @@
-<p>posts works!</p>
+<div *ngIf="posts$ | async as posts" class="rounded-xl mt-4 mb-4 p-4 bg-white shadow-lg">
+  <h1 class="text-xl font-bold text-gray-800 mt-4 mb-4">
+    Click a card to flip
+  </h1>
+
+  <div class="grid lg:grid-cols-10 md:grid-cols-8 sm:grid-cols-5 grid-cols-3 gap-4">
+    <app-tile
+      *ngFor="let post of posts"
+      [id]="post.id"
+      [userId]="post.userId">
+    </app-tile>
+  </div>
+</div>

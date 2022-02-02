@@ -1,1 +1,13 @@
-<p>tile works!</p>
+<div class="h-20 w-20">
+  <div class="card relative cursor-pointer w-full h-full" (click)="flipTile()" [class.flipped]="flipped">
+    <div
+      class="card-face absolute text-white text-center font-bold w-full h-full front bg-orange-600 rounded-xl">
+      <span class="absolute top-1/2 left-1/2">{{ id }}</span>
+    </div>
+
+    <div class="card-face absolute text-white text-center font-bold w-full h-full back bg-orange-800 rounded-xl">
+      <span class="absolute top-1/2 left-1/2">{{ userId }}</span>
+    </div>
+  </div>
+</div>
+
